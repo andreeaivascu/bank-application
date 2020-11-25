@@ -1,0 +1,1 @@
+id_employee: 3 operations: saveAccount,  saveAccount,  updateAccount,  processBill,  transferMoney,  transferMoney,  addClient,  viewClient,  viewAccount,  updateClient,  viewClient,  viewClient,  
