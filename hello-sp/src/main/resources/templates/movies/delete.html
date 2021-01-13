@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace=" fragments1 :: head"></head>
+<body class="container">
+
+<nav th:replace="fragments1 :: navigation"></nav>
+
+    <form method="post">
+
+        <div class="form-group">
+            <th:block th:each="movie : ${movies}">
+                <label>
+                    <span th:text="${movie.name}"></span>
+                    <input type="checkbox" name="movieIds" th:value="${movie.id}" class="form-control">
+                </label>
+            </th:block>
+
+        </div>
+
+        <input type="submit" value="Delete" class="btn btn-danger">
+    </form>
+
+</body>
+</html>

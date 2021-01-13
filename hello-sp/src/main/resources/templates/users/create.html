@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace=" fragments2 :: head"></head>
+<body class="container">
+
+<nav th:replace="fragments2 :: navigation"></nav>
+<form method="post" action="/users/create">
+    <div class="form-group">
+        <label>Name
+            <input th:field="${user.name}" class="form-control">
+        </label>
+        <p class="error" th:errors="${user.name}"></p>
+    </div>
+
+    <div class="form-group">
+        <label>Telephone
+            <input th:field="${user.telephone}" class="form-control">
+        </label>
+        <p class="error" th:errors="${user.telephone}"></p>
+    </div>
+
+    <div class="form-group">
+        <label>Address
+            <input th:field="${user.address}" class="form-control">
+        </label>
+        <p class="error" th:errors="${user.address}"></p>
+    </div>
+    <div class="form-group">
+        <label>CNP
+            <input th:field="${user.CNP}" class="form-control">
+        </label>
+        <p class="error" th:errors="${user.CNP}"></p>
+    </div>
+    <div class="form-group">
+        <label>Email
+            <input th:field="${user.email}" class="form-control">
+        </label>
+        <p class="error" th:errors="${user.email}"></p>
+    </div>
+
+    <div class="form-group">
+        <label>Password
+            <input th:field="${user.password}" class="form-control">
+        </label>
+        <p class="error" th:errors="${user.password}"></p>
+    </div>
+    <div class="form-group">
+        <label>Role
+            <input th:field="${user.role}" class="form-control">
+        </label>
+        <p class="error" th:errors="${user.role}"></p>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-success">
+    </div>
+
+</form>
+</body>
+</html>

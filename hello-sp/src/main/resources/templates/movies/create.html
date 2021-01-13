@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace=" fragments1 :: head"></head>
+<body class="container">
+
+    <nav th:replace="fragments1 :: navigation"></nav>
+    <form method="post" action="/movies/create">
+        <div class="form-group">
+            <label>Name
+                <input th:field="${movie.name}" class="form-control">
+            </label>
+            <p class="error" th:errors="${movie.name}"></p>
+        </div>
+        <div class="form-group">
+            <label>Description
+                <input th:field="${movie.movieDetails.description}" class="form-control">
+            </label>
+            <p class="error" th:errors="${movie.movieDetails.description}"></p>
+        </div>
+        <div class="form-group">
+            <label>Contact Email
+                <input th:field="${movie.movieDetails.contactEmail}" class="form-control">
+            </label>
+            <p class="error" th:errors="${movie.movieDetails.contactEmail}"></p>
+        </div>
+        <div class="form-group">
+            <label>Category
+                <select th:field="${movie.category}">
+                    <option th:each="category : ${categories}"
+                            th:value="${category.id}"
+                            th:text="${category.name}">
+                    </option>
+                </select>
+                <p class="error" th:errors="${movie.category}"></p>
+            </label>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Create" class="btn btn-success">
+        </div>
+
+    </form>
+</body>
+</html>

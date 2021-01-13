@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace=" fragments1 :: head"></head>
+<body class="container">
+
+<nav th:replace="fragments1 :: navigation"></nav>
+<form method="post" action="/movies/update">
+    <p> Choose one/more fields to update the movie:</p>
+
+    <tr>
+        <th>Id movie to update:</th>
+        <p>
+            <input type="text" name="movieId" />
+        </p>
+    </tr>
+
+    <tr>
+        <th>name update:</th>
+        <p>
+            <input type="text" name="name" />
+        </p>
+    </tr>
+    <tr>
+        <th>description update:</th>
+        <p>
+            <input type="text" name="description" />
+        </p>
+    </tr>
+    <tr>
+        <th>email update:</th>
+        <p>
+            <input type="text" name="email" />
+        </p>
+    </tr>
+
+
+
+    <input type="submit" value="Update" class="btn btn-success"/>
+</form>
+</body>
+</html>

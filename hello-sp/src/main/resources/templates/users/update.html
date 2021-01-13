@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace=" fragments2 :: head"></head>
+<body class="container">
+
+<nav th:replace="fragments2 :: navigation"></nav>
+<form method="post" action="/users/update">
+
+    <p> Choose one/more fields to update the user:</p>
+
+    <tr>
+        <th>Id user to update:</th>
+     <p>
+     <input type="text" name="userId" />
+     </p>
+    </tr>
+
+    <tr>
+        <th>email update:</th>
+        <p>
+            <input type="text" name="email" />
+        </p>
+    </tr>
+    <tr>
+        <th>telephone update:</th>
+        <p>
+            <input type="text" name="telephone" />
+        </p>
+    </tr>
+    <tr>
+        <th>address update:</th>
+        <p>
+            <input type="text" name="address" />
+        </p>
+    </tr>
+    <tr>
+        <th>password update:</th>
+        <p>
+            <input type="text" name="password" />
+        </p>
+    </tr>
+
+
+
+        <input type="submit" value="Update" class="btn btn-success"/>
+
+
+</form>
+</body>
+</html>
